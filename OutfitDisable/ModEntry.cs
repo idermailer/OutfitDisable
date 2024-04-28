@@ -219,8 +219,11 @@ namespace OutfitDisable
                 else
                 {
                     if (outfitType == "Beach")
-                        monitor.Log("If you deleted \"data/animationsReplace_\" + s + \".json\", you can copy from this mod's GitHub repository,\n" +
-                            "(not ready yet),\nand save as json file.", LogLevel.Info);
+                    {
+                        string url = "https://github.com/idermailer/OutfitDisable/blob/master/OutfitDisable/data/animationsReplace_Beach_default.txt";
+                        monitor.Log("If you deleted \"data/animationsReplace_" + outfitType + ".json\", you can copy from this mod's GitHub repository,\n" +
+                            url + ",\nand save as json file.", LogLevel.Warn);
+                    }
                 }
             }
         }
